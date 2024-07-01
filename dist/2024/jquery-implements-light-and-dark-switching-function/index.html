@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Maple Blog</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/maple-icon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../../css/styles.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- 引入 Prism.js -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <script src="../../live2d/L2Dwidget.min.js"></script>
+    <script src="../../js/live2d.js"></script>
+
+    <link rel="stylesheet" href="../../css/light-dark-switch.css">
+</head>
+
+<body class="light-theme">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="../../../index.html">Maple Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../../about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
+                            href="../../archives.html">Archives</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div id="light-dark-switch" onclick="toggleIcon(event)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(255,255,255,1)" class="light-sun">
+                <path
+                    d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z">
+                </path>
+            </svg>
+        </div> -->
+    </nav>
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('assets/img/post-bg.jpg')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="post-heading">
+                        <h1>jQuery implements light and dark switching function</h1>
+                        <!-- <h2 class="subheading">Problems look mighty small from 150 miles up</h2> -->
+                        <span class="meta">
+                            Posted by
+                            <a href="#!">Maple</a>
+                            on May 8, 2024
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Post Content-->
+    <article class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <h2 class="section-heading">Introduction to light and dark modes</h2>
+                    <p>Light and dark switching means that in a website or application interface, users can switch from
+                        light mode to dark mode or vice versa according to their own preferences or environmental needs.
+                        The light and dark mode switching function can improve user efficiency, improve user visual
+                        comfort, and enhance the brand image of the website or application.</p>
+                    <p>In 2018~2019, with the popularity of smartphones, more and more users began to use smartphones to
+                        browse the web. With the popularity of smartphones, the light and dark mode switching function
+                        has gradually become a hot spot for users. For websites whose interfaces are dominated by bright
+                        colors, in order to prevent glare at night, users usually lower the screen brightness so that
+                        they can browse in the dark. For websites with mainly dark interfaces, in order to improve the
+                        visual effect during the day, users usually increase the screen brightness so that they can
+                        browse in bright conditions.
+                    </p>
+                    <p>In order to solve this problem, in modern Internet applications, light and dark mode switching is
+                        used. Users can adjust the light and dark mode according to their own preferences. There are
+                        many ways to implement the light and dark function, including through browser settings, through
+                        user operations, and through websites. Or apply its own settings, etc. The following introduces
+                        a light and dark mode switching function implemented through jQuery.
+                    </p>
+
+                    <h2 class="section-heading">jQuery implements related operations</h2>
+
+                    <h3 class="post-subtitle">core code</h3>
+
+                    <p>Use jQuery's addClass() and removeClass() methods to add and delete classes, and change the style
+                        of the web page by switching classes.</p>
+
+                    <!-- syntax highlighting -->
+                    <pre><code class="language-javascript">if ($('#toggle').is(":checked")) {
+    $("body").addClass("dark-class");
+} else {
+    $("body").removeClass("dark-class")
+}</code></pre>
+
+                    <h3 class="post-subtitle">steps</h3>
+                    <p>Add a button and a checkbox in HTML, and associate it with the input ID through the for attribute
+                        of the label label, so that clicking anywhere other than the checkbox can match and be used to
+                        switch modes.</p>
+
+                    <!-- HTML syntax highlighting -->
+
+                    <pre><code class="language-html">&lt;body&gt;
+    &lt;h2&gt;Using the &lt;i&gt; JQuery &lt;/i&gt; to toggle between light and dark modes in JavaScript.&lt;/h2&gt;
+    &lt;p&gt;This is the content of the webpage.&lt;/p&gt;
+    &lt;label class="toggleButton" for="toggle"&gt;
+        &lt;input type="checkbox" id="toggle"&gt;
+        &lt;div class="roundButton circle"&gt;&lt;/div&gt;
+    &lt;/label&gt;
+&lt;/body&gt;
+</code></pre>
+
+                    <p>Create dark mode and light mode css styles for HTML</p>
+
+                    <!-- CSS syntax highlighting -->
+                    <pre><code class="language-css">&lt;style&gt;
+    body {
+        color: black;
+        background-color: rgb(241, 241, 241);
+        text-align: center;
+        justify-content: center;
+    }
+
+    .dark-class {
+        color: white;
+        background-color: rgb(12, 10, 10);
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .toggleButton {
+        width: 5rem;
+        height: 2rem;
+        position: relative;
+        display: inline-block;
+    }
+
+    .toggleButton input {
+        opacity: 0;
+    }
+
+    .roundButton {
+        background-color: black;
+        top: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+    }
+
+    .roundButton:before {
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        content: "";
+        background-color: grey;
+        transition: 1s;
+        height: 2rem;
+        width: 2rem;
+    }
+
+    input:checked+.roundButton {
+        background-color: white;
+    }
+
+    input:checked+.roundButton:before {
+        transform: translateX(3rem);
+    }
+
+    .roundButton.circle {
+        border-radius: 2rem;
+    }
+
+    .roundButton.circle:before {
+        border-radius: 50%;
+    }
+
+    #test {
+        display: block;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+
+&lt;/style&gt;
+</code></pre>
+
+
+
+                    <p>Use jQuery code to add functionality to the switch button to switch between light and dark modes
+                    </p>
+
+                    <!-- jQuery syntax highlighting -->
+                    <pre><code class="language-javascript">// Listen for changes in switch buttons
+$('#toggle').change(() => {
+    // Check if the switch button is selected
+    if ($('#toggle').is(":checked")) {
+        $("body").addClass("dark-class");
+    } else {
+        $("body").removeClass("dark-class")
+    }
+});
+</code></pre>
+
+                    <h2 class="section-heading">Complete code example</h2>
+
+                    <pre><code class="language-html">&lt;html&gt;
+
+&lt;head&gt;
+    &lt;style&gt;
+        body {
+            color: black;
+            background-color: rgb(241, 241, 241);
+            text-align: center;
+            justify-content: center;
+        }
+
+        .dark-class {
+            color: white;
+            background-color: rgb(12, 10, 10);
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .toggleButton {
+            width: 5rem;
+            height: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .toggleButton input {
+            opacity: 0;
+        }
+
+        .roundButton {
+            background-color: black;
+            top: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            cursor: pointer;
+        }
+
+        .roundButton:before {
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            content: "";
+            background-color: grey;
+            transition: 1s;
+            height: 2rem;
+            width: 2rem;
+        }
+
+        input:checked+.roundButton {
+            background-color: white;
+        }
+
+        input:checked+.roundButton:before {
+            transform: translateX(3rem);
+        }
+
+        .roundButton.circle {
+            border-radius: 2rem;
+        }
+
+        .roundButton.circle:before {
+            border-radius: 50%;
+        }
+
+        #test {
+            display: block;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    &lt;/style&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        Integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"&gt; &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h2&gt;Using the &lt;i&gt; JQuery &lt;/i&gt; to toggle between light and dark modes in JavaScript.&lt;/h2&gt;
+    &lt;p&gt;This is the content of the webpage.&lt;/p&gt;
+    &lt;label class="toggleButton" for="toggle"&gt;
+        &lt;input type="checkbox" id="toggle"&gt;
+        &lt;div class="roundButton circle"&gt;&lt;/div&gt;
+    &lt;/label&gt;
+
+    &lt;script&gt;
+        // Listen for changes in switch buttons
+        $('#toggle').change(() =&gt; {
+            // Check if the switch button is selected
+            if ($('#toggle').is(":checked")) {
+                $("body").addClass("dark-class");
+            } else {
+                $("body").removeClass("dark-class")
+            }
+        })
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+                    <h2 class="section-heading">Show results</h2>
+                    <img src="../../assets/img/light-dark-switch.gif" alt="light-dark-switch" style="width: 694px;" class="img-fluid">
+
+
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- Footer-->
+    <footer class="border-top">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="https://t.me/Alc_maple">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-telegram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="tencent://message/?uin=2933724627">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-qq fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/AlcMaple">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2024</div> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../../js/scripts.js"></script>
+    <script src="../../js/lightDarkSwitch.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+#light-dark-switch {
+    /* position: absolute; */
+    z-index: 999999;
+    width: 26px;
+    margin: 18px;
+    /* display: none; */
+}
+
+.d-none {
+    display: none;
+}
+
+a {
+    color: #336699;
+}
+
+.dark-theme,
+.dark-theme p,
+.dark-theme h2,.dark-theme blockquote {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+.light-theme,
+.light-theme p,
+.light-theme h2,.light-theme blockquote {
+    background-color: #fff !important;
+    color: #333 !important;
+}

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Maple Blog</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/maple-icon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../../css/styles.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- 引入 Prism.js -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <style>
+        #pre {
+            padding: 1em;
+            margin: .5em 0;
+            overflow: auto;
+            border-radius: 0.3em;
+            background-color: black;
+            color: white;
+        }
+
+        /* img{
+            width: 694px;
+        } */
+    </style>
+    <script src="../../live2d/L2Dwidget.min.js"></script>
+    <script src="../../js/live2d.js"></script>
+
+    <link rel="stylesheet" href="../../css/light-dark-switch.css">
+</head>
+
+<body class="light-theme">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="../../../index.html">Maple Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../../about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
+                            href="../../archives.html">Archives</a>
+                    </li>
+                    <!-- <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../../contact.html">Contact</a> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div id="light-dark-switch" onclick="toggleIcon(event)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(255,255,255,1)" class="light-sun">
+                <path
+                    d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z">
+                </path>
+            </svg>
+        </div> -->
+    </nav>
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('assets/img/post-bg.jpg')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="post-heading">
+                        <h1>chat on wechat</h1>
+                        <!-- <h2 class="subheading">Problems look mighty small from 150 miles up</h2> -->
+                        <span class="meta">
+                            Posted by
+                            <a href="#!">Maple</a>
+                            on May 10, 2024
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Post Content-->
+    <article class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+
+                    <!-- <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span> -->
+
+                    <blockquote class="blockquote">今天发现了一个很有意思的项目，将聊天机器人应用到微信上，因此尝试搭建一下</blockquote>
+
+                    <p>项目源出处：<a
+                            href="https://github.com/zhayujie/chatgpt-on-wechat?tab=readme-ov-file">https://github.com/zhayujie/chatgpt-on-wechat?tab=readme-ov-file</a>
+                    </p>
+
+                    <h2 class="post-subtitle">steps</h2>
+
+                    <h3 class="post-subtitle">环境</h3>
+
+                    <ul class="post-subtitle">
+                        <li class="post-subtitle">Windows 10 专业版</li>
+                        <li class="post-subtitle">docker desktop</li>
+                        <li class="post-subtitle">wget 工具</li>
+                        <li class="post-subtitle">ollama</li>
+                        <li class="post-subtitle">WeChat</li>
+                    </ul>
+
+                    <h3 class="post-subtitle">准备工作</h3>
+
+                    <p>1. 安装 docker desktop</p>
+
+                    <p>在控制面板中 -> 程序 -> 启用或关闭windows功能 -> 勾选Hyper-V、适用于Linux的Windows子系统、虚拟机平台</p>
+
+                    <p>点击“确定” -> 重启电脑</p>
+
+                    <img src="img/6.PNG" alt="" class="img-fluid">
+
+                    <p>2. 安装wsl</p>
+
+
+
+                    <p><b>管理员模式</b> 打开 powershell 输入以下命令</p>
+
+                    <pre id="pre"><code>wsl --update
+
+wsl --install</code></pre>
+
+                    <p><b>注意:</b>在执行wsl --install（这个命令可能要魔法）</p>
+
+                    <p>注册账号和密码，之后会安装一个linux系统</p>
+
+                    <img src="img/2.PNG" alt="" class="img-fluid">
+
+                    <p>安装完成后重启电脑</p>
+
+                    <p><b>注意:</b>如果没有执行前面的部分，安装的docker后，界面将会是空白</p>
+
+
+
+                    <p>3. 安装 docker</p>
+
+                    <img src="img/28.PNG" alt="" class="img-fluid">
+
+                    <p>安装完成后会自动重启电脑(如果没有重启,建议手动重启一下)</p>
+
+                    <p>重启电脑后再次打开docker，若启动docker后看到侧边栏有容器、图像等字样说明安装成功</p>
+
+                    <img src="img/3.PNG" alt="" class="img-fluid">
+
+                    <p>也可以使用以下命令验证是否安装成功(cmd)</p>
+
+                    <pre id="pre"><code>docker -v
+
+docker compose version</code></pre>
+
+                    <img src="img/4.PNG" alt="" class="img-fluid">
+
+
+
+                    <p>4. docker 部署 fastgpt</p>
+
+                    <p>在<a href="https://cloud.fastgpt.in/app/list">FastGPT</a>创建一个应用</p>
+
+                    <img src="img/5.PNG" alt="" class="img-fluid">
+
+                    <p>创建完应用后，进去刚刚创建的应用，配置AI模型，测试一下刚刚创建的应用的ai模型是否能使用</p>
+
+                    <img src="img/7.PNG" alt="" class="img-fluid">
+
+                    <p>根据<a
+                            href="https://doc.fastgpt.run/docs/development/docker/">官方文档</a>下载config.json
+                    </p>
+
+                    <p>如果你是Linux用户的话,可以通过命令行下载</p>
+
+                    <p>下载完后,打开docker,直到右下角变绿(启动成功后)</p>
+
+                    <p>打开你的两个文件的所在处（我这里新建了一个chatgpt-on-wechat目录来存放这两个文件），然后cmd执行命令</p>
+
+                    <pre id="pre"><code>docker-compose up</code></pre>
+
+                    <p>安装过程非常慢，成功后的状态</p>
+
+                    <img src="img/10.PNG" alt="" class="img-fluid">
+
+                    <p>此时docker desktop容器里就可以看到了</p>
+
+                    <img src="img/11.PNG" alt="" class="img-fluid">
+
+                    <p>
+                        双击点击去，所在路径是你刚刚执行docker-compose up的所在目录
+                    </p>
+
+
+
+                    <img src="img/12.PNG" alt="" class="img-fluid">
+
+                    <p>
+                        然后运行localhost:3000，运行登录进去fastgpt（默认账号：root，密码：1234），测试成功
+                    </p>
+
+                    <img src="img/13.PNG" alt="" class="img-fluid">
+
+                    <p>此时你要重新创建一下应用（前面的创建只是为了演示fastgpt的使用）</p>
+
+                    <p><b>注意:</b>此时的AI模型只有三个，而这三个你是没有权限的（如果有openAPI账号，可以在后续中ollama里配置</p>
+
+                    <img src="img/14.PNG" alt="" class="img-fluid">
+
+                    <p>发布应用，创建的fastgpt密钥</p>
+
+
+
+                    <img src="img/15.PNG" alt="" class="img-fluid">
+
+                    <img src="img/16.PNG" alt="" class="img-fluid">
+
+                    <p>5. 配置wget(因为Windows没有自带的wget工具,需要手动下载,Linux用户可以跳过此步骤)</p>
+
+                    <p>访问<a href="https://eternallybored.org/misc/wget/">wget官网</a>，下载wget压缩包</p>
+
+                    <p>解压压缩包后,将其配置到环境变量当中</p>
+
+                    <h3 class="post-subtitle">部署微信机器人</h3>
+
+                    <p>找到<a href="https://github.com/zhayujie/chatgpt-on-wechat?tab=readme-ov-file">微信机器人</a>项目</p>
+
+                    <p>新建一个目录，名字为chatgpt-on-wechat，这个与你上面的docker部署fastgpt的目录名字是一样的</p>
+
+                    <p>然后根据项目的快速搭建，在这个项目运行。将这个文件替换掉你之前下载的文件</p>
+
+
+
+                    <p>然后在cmd中运行</p>
+
+                    <pre
+                        id="pre"><code>wget https://open-1317903499.cos.ap-guangzhou.myqcloud.com/docker-compose.yml</code></pre>
+
+                    <p>修改这个docker-compose.yml配置文件</p>
+
+                    <pre><code class="language-yml">
+version: '2.0'
+services:
+  chatgpt-on-wechat:
+    image: zhayujie/chatgpt-on-wechat
+    container_name: chatgpt-on-wechat
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      OPEN_AI_API_KEY: 'fastgpt-DlzLulpesfJIrbPKKmEbsgyqFBLg7xeh70bpYRws3ZMYbDYgZtXOB8dtUwnV'
+      OPEN_AI_API_BASE: 'http://host.docker.internal:3000/api/v1'
+      MODEL: 'gpt-3.5-turbo'
+      PROXY: ''
+      SINGLE_CHAT_PREFIX: '["bot", "@bot"]'
+      SINGLE_CHAT_REPLY_PREFIX: '"[bot] "'
+      GROUP_CHAT_PREFIX: '["@bot"]'
+      GROUP_NAME_WHITE_LIST: '["九转寿司"]'
+      IMAGE_CREATE_PREFIX: '["画", "看", "找"]'
+      CONVERSATION_MAX_TOKENS: 1000
+      SPEECH_RECOGNITION: 'False'
+      CHARACTER_DESC: '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。'
+      EXPIRES_IN_SECONDS: 3600
+      USE_GLOBAL_PLUGIN_CONFIG: 'True'
+      USE_LINKAI: 'False'
+      LINKAI_API_KEY: ''
+      LINKAI_APP_CODE: ''</code></pre>
+
+                    <p>修改的部分</p>
+
+                    <ul>
+                        <li>OPEN_AI_API_KEY: 填入你刚刚创建的fastgpt应用的密钥</li>
+                        <li>新增:OPEN_AI_API_BASE: 'http://host.docker.internal:3000/api/v1'</li>
+                        <li>修改GROUP_NAME_WHITE_LIST，值为你的微信群的名称</li>
+                    </ul>
+
+                    <p>重启docker，运行</p>
+
+                    <pre id="pre"><code>docker-compose up</code></pre>
+
+                    <p>此时，你的docker会多了一个容器</p>
+
+
+                    <img src="img/17.PNG" alt="" class="img-fluid">
+
+
+                    <p>稍等片刻，然后微信扫码</p>
+
+                    <p><b>注意:</b>这里Windows的cmd有个毛病，弹出的二维码你扫不了</p>
+
+                    <p>但是非常幸运的是，docker里面可以看到你的cmd日志信息，在那里可以扫描</p>
+
+                    <p>如果登录的时候，登录确认了但是遇到了问题</p>
+
+                    <img src="img/18.PNG" alt="" class="img-fluid">
+
+                    <p>原因是由于你的微信是刚刚注册的，微信权限管控的限制，你必须使用相对注册较久的账号</p>
+
+                    <p>扫码登录确认后，就可以用其他微信号@这个机器人发送消息了</p>
+
+                    <p>此时又遇到了一个问题，就是用的chatgpt3.5是没有余额的</p>
+
+                    <p>安装<a href="https://ollama.com/download/windows">ollama</a> ,搭建一个本地的AI</p>
+
+                    <img src="img/9.PNG" alt="" class="img-fluid">
+
+                    <p>安装完成后,通过cmd验证是否安装成功</p>
+
+
+
+                    <pre id="pre"><code>ollama --version</code></pre>
+
+                    <p>在刚刚的ollama官网中,下载一个模型,这里使用的是qwen模型</p>
+
+                    <img src="img/1.PNG" alt="" class="img-fluid">
+
+                    <p>将下载模型的命令复制到cmd中</p>
+
+
+                    <pre id="pre"><code>ollama run qwen:7b</code></pre>
+
+                    <p>下载完后可以通过ollama list查看是否有下载成功</p>
+
+                    <p>接着再次重启docker</p>
+
+                    <p>访问One API（localhost:3001）</p>
+
+                    <img src="img/19.PNG" alt="" class="img-fluid">
+
+                    <p>登录oneAPI（默认账号：root 密码：123456）</p>
+
+                    <p>添加渠道</p>
+
+                    <img src="img/20.PNG" alt="" class="img-fluid">
+
+                    <p>↓这里的名称，是后续你在fastgpt里看到的模型的名称</p>
+
+                    <img src="img/21.PNG" alt="" class="img-fluid">
+
+                    <p>填入的模型是你刚刚下载的模型，可以通过cmd的ollama list查看你的模型名称，再填进去</p>
+
+                    <img src="img/23.PNG" alt="" class="img-fluid">
+
+                    <img src="img/22.PNG" alt="" class="img-fluid">
+
+                    <img src="img/24.PNG" alt="" class="img-fluid">
+
+                    <p>提交完毕后，出去测试一下,测试所需响应时间根据电脑不同而不同</p>
+
+                    <img src="img/25.PNG" alt="" class="img-fluid">
+
+                    <p>
+                        去到目录文件config.json中，添加自己的模型
+                    </p>
+
+                    <p>
+                        赋值某一个，然后修改model和name即可
+                    </p>
+
+                    <p>model和name是你刚刚创建渠道对应的名字</p>
+
+                    <pre><code class="language-json">
+"llmModels": [
+    {
+        "model": "gpt-3.5-turbo",
+        "name": "gpt-3.5-turbo",
+        "maxContext": 16000,
+        "avatar": "/imgs/model/openai.svg",
+        "maxResponse": 4000,
+        "quoteMaxToken": 13000,
+        "maxTemperature": 1.2,
+        "charsPointsPrice": 0,
+        "censor": false,
+        "vision": false,
+        "datasetProcess": true,
+        "usedInClassify": true,
+        "usedInExtractFields": true,
+        "usedInToolCall": true,
+        "usedInQueryExtension": true,
+        "toolChoice": true,
+        "functionCall": true,
+        "customCQPrompt": "",
+        "customExtractPrompt": "",
+        "defaultSystemChatPrompt": "",
+        "defaultConfig": {}
+    },
+    {
+        "model": "gpt-4-0125-preview",
+        "name": "gpt-4-turbo",
+        "avatar": "/imgs/model/openai.svg",
+        "maxContext": 125000,
+        "maxResponse": 4000,
+        "quoteMaxToken": 100000,
+        "maxTemperature": 1.2,
+        "charsPointsPrice": 0,
+        "censor": false,
+        "vision": false,
+        "datasetProcess": false,
+        "usedInClassify": true,
+        "usedInExtractFields": true,
+        "usedInToolCall": true,
+        "usedInQueryExtension": true,
+        "toolChoice": true,
+        "functionCall": false,
+        "customCQPrompt": "",
+        "customExtractPrompt": "",
+        "defaultSystemChatPrompt": "",
+        "defaultConfig": {}
+    },
+    {
+        "model": "gpt-4-vision-preview",
+        "name": "gpt-4-vision",
+        "avatar": "/imgs/model/openai.svg",
+        "maxContext": 128000,
+        "maxResponse": 4000,
+        "quoteMaxToken": 100000,
+        "maxTemperature": 1.2,
+        "charsPointsPrice": 0,
+        "censor": false,
+        "vision": true,
+        "datasetProcess": false,
+        "usedInClassify": false,
+        "usedInExtractFields": false,
+        "usedInToolCall": false,
+        "usedInQueryExtension": false,
+        "toolChoice": true,
+        "functionCall": false,
+        "customCQPrompt": "",
+        "customExtractPrompt": "",
+        "defaultSystemChatPrompt": "",
+        "defaultConfig": {}
+    },
+    {
+        "model": "qwen:7b",
+        "name": "ollama-qwen:7b",
+        "maxContext": 16000,
+        "avatar": "/imgs/model/openai.svg",
+        "maxResponse": 4000,
+        "quoteMaxToken": 13000,
+        "maxTemperature": 1.2,
+        "charsPointsPrice": 0,
+        "censor": false,
+        "vision": false,
+        "datasetProcess": true,
+        "usedInClassify": true,
+        "usedInExtractFields": true,
+        "usedInToolCall": true,
+        "usedInQueryExtension": true,
+        "toolChoice": true,
+        "functionCall": true,
+        "customCQPrompt": "",
+        "customExtractPrompt": "",
+        "defaultSystemChatPrompt": "",
+        "defaultConfig": {}
+    }
+],</code></pre>
+
+                    <p>此时重启docker，再次进入fastgpt后可以看到可以选择本地模型ollama-qwen:7b的</p>
+
+
+
+                    <img src="img/26.PNG" alt="" class="img-fluid">
+
+                    <p>选择此模型后，测试一下是否可以使用</p>
+
+                    <p>重新运行，扫码登录，即可使用微信机器人</p>
+
+                    <img src="img/27.PNG" alt="" class="img-fluid">
+
+
+
+                    <p>至此，部署微信机器人成功</p>
+
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- Footer-->
+    <footer class="border-top">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="https://t.me/Alc_maple">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-telegram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="tencent://message/?uin=2933724627">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-qq fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/AlcMaple">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2024</div> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../../js/scripts.js"></script>
+    <script src="../../js/lightDarkSwitch.js"></script>
+</body>
+
+</html>
